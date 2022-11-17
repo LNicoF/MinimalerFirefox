@@ -1,0 +1,44 @@
+:root {
+    --closed-tabbar-width: 57px ;
+    --expanded-tabbar-width: 205px ;
+}
+
+/* This positions the tabs under the navaigator container */
+#titlebar {
+  -moz-box-ordinal-group: 4 !important;
+}
+
+/* center text of the url bar */
+#urlbar-input {
+  text-align: center !important;
+}
+#urlbar-input:focus {
+  text-align: left !important;
+}
+
+/* hide tab bar */
+#TabsToolbar {
+    display: none ;
+}
+
+#nav-bar {
+    padding: 2px ;
+}
+
+#reader-mode-button {
+    display: none;
+}
+
+#sidebar-header {
+    display: none;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
+    min-width: var( --closed-tabbar-width ) !important ;
+    max-width: var( --closed-tabbar-width ) !important ;
+}
+
+#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
+    min-width: var( --expanded-tabbar-width ) !important ;
+    max-width: var( --expanded-tabbar-width ) !important ;
+}
