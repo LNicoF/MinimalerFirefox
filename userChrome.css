@@ -1,6 +1,7 @@
 :root {
-    --closed-tabbar-width: 57px ;
+    --closed-tabbar-width: 36px ;
     --expanded-tabbar-width: 205px ;
+    --hl-color: rgb(199, 146, 234) ;
 }
 
 /* This positions the tabs under the navaigator container */
@@ -21,10 +22,6 @@
     display: none ;
 }
 
-#nav-bar {
-    padding: 2px ;
-}
-
 #reader-mode-button {
     display: none;
 }
@@ -33,12 +30,21 @@
     display: none;
 }
 
+#sidebar-splitter {
+    width: 1px !important ;
+    background-color: var( --chrome-content-separator-color ) !important ;
+    border: 0 !important ;
+}
+
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
     min-width: var( --closed-tabbar-width ) !important ;
     max-width: var( --closed-tabbar-width ) !important ;
+    transition: min-width, max-width .2s ;
 }
-
+/**/
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
     min-width: var( --expanded-tabbar-width ) !important ;
     max-width: var( --expanded-tabbar-width ) !important ;
+    transition: min-width, max-width .2s ;
 }
+/**/
