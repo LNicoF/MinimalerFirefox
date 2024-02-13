@@ -9,6 +9,18 @@
   -moz-box-ordinal-group: 4 !important;
 }
 
+/**
+#navigator-toolbox .toolbarbutton-1 {
+  display: none;
+}
+#navigator-toolbox:hover .toolbarbutton-1 {
+  display: flex;
+}
+#navigator-toolbox[hidden="true"] .toolbarbutton-1 {
+  display: none;
+}
+/**/
+
 /* center text of the url bar */
 #urlbar-input {
   text-align: center !important;
@@ -37,14 +49,15 @@
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
-    min-width: var( --closed-tabbar-width ) !important ;
-    max-width: var( --closed-tabbar-width ) !important ;
-    transition: min-width, max-width .2s ;
+    min-width: var( --closed-tabbar-width ) !important;
+    max-width: var( --expanded-tabbar-width ) !important;
+    width: var( --closed-tabbar-width ) !important;
+    transition: width .5s;
 }
-/**/
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"]:hover {
-    min-width: var( --expanded-tabbar-width ) !important ;
-    max-width: var( --expanded-tabbar-width ) !important ;
-    transition: min-width, max-width .2s ;
+    width: var( --expanded-tabbar-width ) !important;
 }
-/**/
+
+#appcontent {
+    padding: 6px ;
+}
