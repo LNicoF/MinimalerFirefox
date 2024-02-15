@@ -6,27 +6,33 @@
 
 /* This positions the tabs under the navaigator container */
 #titlebar {
-  -moz-box-ordinal-group: 4 !important;
+    -moz-box-ordinal-group: 4 !important;
 }
 
-/**
-#navigator-toolbox .toolbarbutton-1 {
-  display: none;
+#urlbar[open] {
+    position: fixed !important;
+    left: calc( 50vw + var(--closed-tabbar-width) / 2 ) !important;
+    transform: translateX(-50%);
+    width: 75vw !important;
+    max-width: 40rem;
+    top: 20vh !important;
+    box-shadow: #0004 0 0 0 100vw;
+    z-index: 99;
+    min-height: calc( var( --urlbar-height ) * 1.5 ) !important;
 }
-#navigator-toolbox:hover .toolbarbutton-1 {
-  display: flex;
+
+#urlbar > .urlbarView > * {
+    max-height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-#navigator-toolbox[hidden="true"] .toolbarbutton-1 {
-  display: none;
-}
-/**/
 
 /* center text of the url bar */
 #urlbar-input {
-  text-align: center !important;
+    text-align: center !important;
 }
 #urlbar-input:focus {
-  text-align: left !important;
+    text-align: left !important;
 }
 
 /* hide tab bar */
@@ -43,9 +49,7 @@
 }
 
 #sidebar-splitter {
-    width: 1px !important ;
-    background-color: var( --chrome-content-separator-color ) !important ;
-    border: 0 !important ;
+    display: none ;
 }
 
 #sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] {
@@ -60,4 +64,8 @@
 
 #appcontent {
     padding: 6px ;
+}
+
+#tabbrowser-tabpanels {
+    background-color: inherit ;
 }
